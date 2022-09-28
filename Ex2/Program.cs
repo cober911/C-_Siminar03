@@ -14,7 +14,7 @@ int ReadData(string line)
     return number;
 }
 
-int QuterTest(int x, int y);
+int QuterTest(int x, int y)
 {
     if (x > 0 && y > 0)
     {
@@ -40,7 +40,9 @@ void PrintData(string prefix, string value)
     Console.WriteLine(prefix + value);
 }
 
-ReadData("Введите координату X не равную 0: ");
-
+//Запрашиваю кординаты
 int coordX = ReadData("Введите координату X не равную 0: ");
-int coordX = ReadData("Введите координату Y не равную 0: ");
+int coordY = ReadData("Введите координату Y не равную 0: ");
+//Вывожу кординаты
+int quterTest = QuterTest(coordX, coordY);
+PrintData("Номер четверти: ", quterTest.ToString());
